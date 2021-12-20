@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>process Confirm</title>
+</head>
+<body>
+<script>
+
+    function processConfirm(answer){
+        let result = '';
+        if (answer) {
+            result = "Harry Porter";
+        } else {
+            result = "Maybe later noob";
+        }
+        return result
+    }
+
+    let confirmAnswer = prompt("What is your answer");
+    let theAnswer = processConfirm(confirmAnswer);
+    alert(theAnswer);
+</script>
+</body>
+</html>
