@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kiem tra so nguyen to</title>
+</head>
+<body>
+<script>
+    function isPrime(number) {
+        let n = 0;
+        while (n<number) {
+            let flag = true;
+            if (n<2) {
+                flag = false;
+            }
+
+            for (let i=2; i<n-1; i++){
+                if (n%i==0) {
+                    flag = false;
+                }
+            }
+
+            if (flag == true) {
+                document.write(n + '<hr>');
+            }
+            console.log(n);
+            n++
+        }
+
+    }
+
+    let askPrime = prompt("Ban muon in bao nhieu so nguyen to");
+    isPrime(askPrime);
+</script>
+</body>
+</html>
