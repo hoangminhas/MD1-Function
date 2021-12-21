@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Luyen tap ham 01</title>
+</head>
+<body>
+<button onclick="">Goi ham</button>
+<button onclick="prom()">Star</button>
+<script>
+    //Bai 1:
+    // function alertMessage(){
+    //     alert("Xin chao!");
+    // }
+
+    //Bai 2:
+    // function addUpNumber(num) {
+    //     num = prompt("Nhap vao 1 so");
+    //     num = parseFloat(num);
+    //     alert(num+1);
+    // }
+
+    //Bai 3:
+    // function analyst2Num(a, b) {
+    //     a = +prompt("Nhap so A");
+    //     b = +prompt("Nhap so B");
+    //     if (a>b) {
+    //         alert("A lon hon B, nhap lai!");
+    //     } else {
+    //         document.write("A+B= ", a+b);
+    //     }
+    // }
+
+    //Bai 4
+    // function addNumbers() {
+    //     firstNum = 4;
+    //     secondNum = 8;
+    //     result = firstNum + secondNum;
+    //     return result;
+    // }
+    // result = 0;
+    // alert(result);
+    // result = addNumbers();
+    // alert(result)
+
+    //Bai 5
+    let tenNgoiSao = ['Polaris', 'Aldebaran', 'Deneb', 'Vega', 'Altair',
+    'Dubhe', 'Regulus'];
+    let tenChomSao = ['Ursa Minor', 'Tarurus', 'Cygnus', 'Lyra',
+        'Aquila', 'Ursa Major', 'Leo'];
+
+    function prom() {
+        let input = prompt("Nhap ten ngoi sao");
+        lookingConstellation(input);
+    }
+
+    function lookingConstellation(star) {
+        let flag = false;
+        for (let name of tenNgoiSao) {
+            if (star == name) {
+                flag = true;
+            }
+        }
+        if (flag == true) {
+            alert("Thuoc chom sao " + tenChomSao[tenNgoiSao.indexOf(star)]);
+        } else {
+            alert("Khong tim thay chom sao");
+        }
+    }
+
+</script>
+</body>
+</html>
