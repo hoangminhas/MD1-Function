@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chuyen doi giua foot va meters</title>
+</head>
+<body>
+<h3>Foot<input oninput="footToMeter(this.value)" onchange="footToMeter(this.value)" type="text" id="text1">
+</h3>
+<p id="result1"></p>
+<hr>
+<h3>Meters<input oninput="meterToFoot(this.value)" onchange="meterToFoot(this.value)" type="text" id="text2"></h3>
+<p id="result2"></p>
+<script>
+    function footToMeter(foot) {
+        if (foot == "") {
+            foot = 0;
+        }
+        foot = parseFloat(foot);
+        document.getElementById('result1').innerHTML = "= " + (0.305 * foot) + "m";
+
+    }
+
+    function meterToFoot(meter) {
+        if (meter == "") {
+            meter = 0;
+        }
+        meter = parseFloat(meter);
+        document.getElementById('result2').innerHTML = "= " + (3.279 * meter) + "ft";
+    }
+</script>
+</body>
+</html>
